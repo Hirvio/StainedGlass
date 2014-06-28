@@ -1,5 +1,6 @@
 package com.hirvio.stainedglass;
 
+import com.hirvio.stainedglass.block.StainedGlassBlocks;
 import com.hirvio.stainedglass.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,7 +24,7 @@ public class StainedGlass {
     @SidedProxy(clientSide = "com.hirvio.stainedglass.proxies.ClientProxy", serverSide = "com.hirvio.staomedgöass.proxies.CommonProxy")
     public static CommonProxy proxy;
 
-    public static final CreativeTabs stainedglass = new CreativeTabs("stainedglass")
+    public static final CreativeTabs stainedglasstab = new CreativeTabs("stainedglass")
     {
 
         @Override
@@ -46,7 +47,7 @@ public class StainedGlass {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
 
-
+        StainedGlassBlocks.init();
 
     }
 
