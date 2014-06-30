@@ -6,12 +6,12 @@ import net.minecraft.item.Item;
 /**
  * Created by Hirvio on 2014-06-28.
  */
-public class ItemIronDropplet extends Item {
+public class ItemIronDroplet extends Item {
 
 
-    public ItemIronDropplet(){
+    public ItemIronDroplet(){
         setCreativeTab(StainedGlass.stainedglasstab);
-        setTextureName("stainedglass:irondropplet");
+        setTextureName("stainedglass:irondroplet");
     }
 
 }

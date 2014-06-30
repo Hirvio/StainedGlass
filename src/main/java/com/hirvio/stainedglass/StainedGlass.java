@@ -1,6 +1,7 @@
 package com.hirvio.stainedglass;
 
 import com.hirvio.stainedglass.block.StainedGlassBlocks;
+import com.hirvio.stainedglass.item.StainedGlassItems;
 import com.hirvio.stainedglass.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -21,7 +22,7 @@ import net.minecraft.item.Item;
 @Mod(modid="stainedglass", name = "Stained Glass", version = "0.1")
 public class StainedGlass {
 
-    @SidedProxy(clientSide = "com.hirvio.stainedglass.proxies.ClientProxy", serverSide = "com.hirvio.staomedgöass.proxies.CommonProxy")
+    @SidedProxy(clientSide = "com.hirvio.stainedglass.proxies.ClientProxy", serverSide = "com.hirvio.stainedglass.proxies.CommonProxy")
     public static CommonProxy proxy;
 
     public static final CreativeTabs stainedglasstab = new CreativeTabs("stainedglass")
@@ -48,13 +49,21 @@ public class StainedGlass {
     public void preInit(FMLPreInitializationEvent event){
 
         StainedGlassBlocks.init();
+        StainedGlassItems.init();
 
     }
 
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event){
 
+        proxy.registerTileEntities();
+
+        proxy.initRenderingAndTextures();
+
+
     }
 
+    @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
 
     }

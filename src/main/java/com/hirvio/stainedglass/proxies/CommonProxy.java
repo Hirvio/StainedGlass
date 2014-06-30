@@ -1,5 +1,6 @@
 package com.hirvio.stainedglass.proxies;
 
+import com.hirvio.stainedglass.tileentity.TileEntityGlassPane;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -26,6 +27,7 @@ public class CommonProxy {
     public void registerTileEntities()
     {
         //GameRegistry.registerTileEntity(TileEntityAstralCollector.class, "AstralCollector");
+        GameRegistry.registerTileEntity(TileEntityGlassPane.class, "glasspane");
     }
 
 

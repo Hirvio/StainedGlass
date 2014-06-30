@@ -10,10 +10,12 @@ import net.minecraft.block.Block;
 public class StainedGlassBlocks {
 
     public static Block coloredSand;
-
+    public static Block glassPane;
 
     public static void init(){
         coloredSand = new BlockColoredSand();
         GameRegistry.registerBlock(coloredSand, ItemBlockColoredSand.class, "coloredsand");
+        glassPane = new BlockGlassPane();
+        GameRegistry.registerBlock(glassPane, "glasspane");
     }
 }
